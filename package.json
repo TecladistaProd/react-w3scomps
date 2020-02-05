@@ -1,0 +1,63 @@
+{
+  "name": "react-w3scomps",
+  "version": "1.0.0",
+  "description": "w3school like components in react",
+  "source": "src/index.ts",
+  "main": "dist/react-w3scomps.js",
+  "umd:main": "dist/react-w3scomps.umd.js",
+  "module": "dist/react-w3scomps.m.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "microbundle watch -o dist/ --tsconfig ./tsconfig.json --sourcemap false --no-compress",
+    "build": "microbundle -o dist/ --tsconfig ./tsconfig.json --sourcemap false --no-compress"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "JavaScript",
+    "ReactJS",
+    "TypeScript"
+  ],
+  "author": "TecladistaProd",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@testing-library/react": "^9.4.0",
+    "@types/jest": "^25.1.1",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "babel-jest": "^25.1.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "jest-dom": "^4.0.0",
+    "microbundle": "^0.11.0",
+    "postcss-modules": "^1.5.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0",
+    "ts-jest": "^25.2.0",
+    "typescript": "^3.7.5"
+  }
+}
