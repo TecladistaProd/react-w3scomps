@@ -12,7 +12,7 @@ interface State {}
 class Template extends PureComponent<Props, State> {
   render() {
     return(
-      <div></div>
+      <div css={styles}></div>
     )
   }
 }

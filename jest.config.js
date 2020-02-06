@@ -11,6 +11,7 @@ module.exports = {
     "<rootDir>/__test__/**/*.spec.ts",
     "<rootDir>/__test__/**/*.spec.tsx"
   ],
+  testPathIgnorePatterns: ["<rootDir>/__test__/.ignore"],
   collectCoverageFrom: [
     'src/**/*.js',
   ],

@@ -3,6 +3,13 @@
 import { jsx, css } from '@emotion/core';
 
 export default css`
+  &,
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
   width: 100%;
   height: auto;
   --panelHeight: 0px;

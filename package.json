@@ -10,7 +10,11 @@
     "test": "jest",
     "watch": "microbundle watch -o dist/ --tsconfig ./tsconfig.json --sourcemap false --no-compress",
     "build": "microbundle -o dist/ --tsconfig ./tsconfig.json --sourcemap false --no-compress",
-    "commit": "git add * && git-cz"
+    "postbuild": "node postbuild.js",
+    "commit": "git add * && git-cz",
+    "predeploy": "yarn test && yarn build",
+    "deploy": "yarn commit",
+    "postdeploy": "git push"
   },
   "husky": {
     "hooks": {

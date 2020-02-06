@@ -4,6 +4,13 @@ import { jsx, css } from '@emotion/core';
 // import styled from '@emotion/styled';
 
 const styles = css`
+  &,
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
   --size: 35px;
   --color: #333;
   height: var(--size);
@@ -12,12 +19,8 @@ const styles = css`
   flex-direction: column;
   width: var(--size);
   justify-content: space-around;
-  outline: 0;
   border: none;
-  margin: 0;
-  padding: 0;
   background: 0;
-  box-sizing: border-box;
   .bar {
     width: var(--size);
     height: calc(var(--size) * 0.14286);

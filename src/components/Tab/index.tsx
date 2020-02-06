@@ -5,7 +5,7 @@ import React, { PureComponent } from "react";
 import { jsx } from '@emotion/core';
 import styles from './styles';
 
-const Content = ({ children, active }: { children: React.ReactElement<any>, active?: boolean, id: number }) => {
+const Content: React.FC<{ active?: boolean, id: number }> = ({ children, active }) => {
   return (
     <div className={'tabcontent' + `${active ? ' active': ''}`}>{children}</div>
   )
@@ -22,7 +22,6 @@ interface tabTitle {
 
 interface Props {
   tabsTitle: Array<tabTitle>,
-  children: Array<React.ReactElement<HTMLDivElement>>,
   style?: React.CSSProperties,
   type?: string
 }

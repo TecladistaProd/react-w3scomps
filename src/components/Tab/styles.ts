@@ -4,6 +4,13 @@ import { jsx, css } from '@emotion/core';
 
 export default {
   horizontal: css`
+    &,
+    * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      box-sizing: border-box;
+    }
     width: 100%;
     height: auto;
     .tabs {
@@ -45,7 +52,11 @@ export default {
     }
   `,
   vertical: css`
+    &,
     * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
       box-sizing: border-box;
     }
     width: 100%;

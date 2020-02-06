@@ -12,7 +12,6 @@ interface State {
 
 interface Props {
   buttonTitle: string,
-  children: React.ReactElement<any>,
   style?: React.CSSProperties
 }
 

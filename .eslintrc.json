@@ -47,9 +47,9 @@
     }
   ],
   "settings": {
-    "import/extensions": [".ts", ".js"],
+    "import/extensions": [".ts", "tsx", ".js"],
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".js"]
+      "@typescript-eslint/parser": [".ts", "tsx", ".js"]
     },
     "import/resolver": {
       "typescript": {
