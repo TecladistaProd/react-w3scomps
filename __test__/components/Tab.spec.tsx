@@ -29,9 +29,9 @@ describe('Tab Component', () => {
   const NormalTab = () => (
     <Tab tabsTitle={tabs.map(({ title, id }) => ({ title, id }))}>
       {tabs.map(i => (
-        <Tab.TabContent id={i.id} key={i.id}>
+        <Tab.Content id={i.id} key={i.id}>
           <p>{i.text}</p>
-        </Tab.TabContent>
+        </Tab.Content>
       ))}
     </Tab>
   );
