@@ -1,43 +1,43 @@
 /** @jsx jsx */
 
-import React, { PureComponent } from "react";
+import React from 'react';
 
 import { jsx } from '@emotion/core';
 import styles from './styles';
 
 interface Props {
-  tooltipText: string,
-  text: string,
-  position?: string,
-  style?: React.CSSProperties
+  tooltipText: string;
+  text: string;
+  position?: string;
+  style?: React.CSSProperties;
 }
 
 interface State {}
 
-const Tooltip: React.FC<Props> = (props) => {
-  if(!props.text || typeof props.text !== 'string')
-    throw new Error('you should pass text props and should be string type')
-  let posCl = ''
-  switch(props.position) {
+const Tooltip: React.FC<Props> = props => {
+  if (!props.text || typeof props.text !== 'string')
+    throw new Error('you should pass text props and should be string type');
+  let posCl = '';
+  switch (props.position) {
     case 'bottom':
-      posCl += 'bottom'
-    break;
+      posCl += 'bottom';
+      break;
     case 'right':
-      posCl += 'right'
-    break;
+      posCl += 'right';
+      break;
     case 'left':
-      posCl += 'left'
-    break;
+      posCl += 'left';
+      break;
     default:
-      posCl += 'top'
-    break;
+      posCl += 'top';
+      break;
   }
-  return(
+  return (
     <div style={props.style} css={styles}>
       <span className={`tooltiptext ${posCl}`}>{props.tooltipText}</span>
       {props.text}
     </div>
-  )
-}
+  );
+};
 
 export default Tooltip;

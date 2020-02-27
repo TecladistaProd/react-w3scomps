@@ -20,6 +20,8 @@ export default css`
   .accordion {
     background: var(--buttonColor);
     color: var(--titleColor);
+    text-transform: uppercase;
+    font-weight: 600;
     cursor: pointer;
     padding: 18px;
     width: 100%;

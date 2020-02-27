@@ -9,12 +9,14 @@
   "scripts": {
     "test": "jest",
     "watch": "microbundle watch -o dist/ --tsconfig ./tsconfig.json --sourcemap false --no-compress",
-    "build": "microbundle -o dist/ --tsconfig ./tsconfig.json --sourcemap false --no-compress",
+    "build": "microbundle -o dist/ --tsconfig ./tsconfig.json --sourcemap false",
     "postbuild": "node postbuild.js",
     "commit": "git add * && git-cz",
     "predeploy": "yarn test && yarn build",
     "deploy": "yarn commit",
-    "postdeploy": "git push"
+    "postdeploy": "git push origin master",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -43,6 +45,10 @@
     "@babel/preset-react": "^7.8.3",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-links": "^5.3.14",
+    "@storybook/addons": "^5.3.14",
+    "@storybook/react": "^5.3.14",
     "@testing-library/react": "^9.4.0",
     "@types/jest": "^25.1.1",
     "@types/react": "^16.9.19",
@@ -63,6 +69,7 @@
     "microbundle": "^0.11.0",
     "postcss-modules": "^1.5.0",
     "prettier": "^1.19.1",
+    "react-syntax-highlighter": "^12.2.1",
     "react-test-renderer": "^16.12.0",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5"

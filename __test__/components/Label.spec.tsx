@@ -7,15 +7,15 @@ import {
   render as rtlRender,
 } from '@testing-library/react';
 
-import Template from '../../src/components/Template';
+import Label from '../../src/components/Label';
 
 const errDispatch = console.error;
 console.error = (msg: string | object) => {};
 
-describe('Template Component', () => {
+describe('Label Component', () => {
   it('should render normaly', () => {
-    const { container } = rtlRender(<Template></Template>);
+    const { container } = rtlRender(<Label>Hello World</Label>);
 
-    expect(!!container.querySelector('div')).toBe(true);
+    expect(!!container.querySelector('span')).toBe(true);
   });
 });

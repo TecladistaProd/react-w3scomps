@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react';
 
 import { jsx } from '@emotion/core';
 import styles from './styles';
@@ -11,9 +11,7 @@ interface State {}
 
 class Template extends PureComponent<Props, State> {
   render() {
-    return(
-      <div css={styles}></div>
-    )
+    return <div css={styles}></div>;
   }
 }
 

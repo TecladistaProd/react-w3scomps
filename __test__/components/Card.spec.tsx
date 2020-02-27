@@ -4,13 +4,13 @@ import {
   act,
   fireEvent,
   wait,
-  render as rtlRender
+  render as rtlRender,
 } from '@testing-library/react';
 
-import Card from '../../src/components/Card'
+import Card from '../../src/components/Card';
 
-const errDispatch = console.error
-console.error = (msg: string|object) => {}
+const errDispatch = console.error;
+console.error = (msg: string | object) => {};
 
 describe('Card Component', () => {
   it('should render normaly', () => {
@@ -19,20 +19,17 @@ describe('Card Component', () => {
         <Card.Content>
           <h1>Hello world</h1>
         </Card.Content>
-      </Card>
-    )
+      </Card>,
+    );
 
-    expect(
-      container
-      .querySelector('div .card-content h1')?.textContent
-    ).toBe('Hello world')
-  })
+    expect(container.querySelector('div .card-content h1')?.textContent).toBe(
+      'Hello world',
+    );
+  });
 
   it('should dispatch an error', () => {
-    const res = () => rtlRender(
-      <Card></Card>
-    )
+    const res = () => rtlRender(<Card></Card>);
 
-    expect(res).toThrowError('You should pass children')
-  })
-})
+    expect(res).toThrowError('You should pass children');
+  });
+});
